@@ -2,9 +2,12 @@ class binarin::profile::user_binarin {
   ::binarin::profile::profile_sync_daemon::user { "binarin": }
   include ::binarin::profile::docker
   include ::binarin::profile::dropbox
+  include ::binarin::profile::ack
 
   $packages = [ "zsh", "tmux", "screen", "mosh", "mc",
-                "build-essential", "rxvt-unicode-256color", "kupfer" ]
+                "build-essential", "rxvt-unicode-256color", "kupfer",
+                "libkeybinder-dev", "wmctrl" ]
+
   package { $packages: ensure => latest }
 
   Package["zsh"] -> User["binarin"]
@@ -18,6 +21,4 @@ class binarin::profile::user_binarin {
     home => "/home/binarin",
     shell => "/bin/zsh",
   }
-
-
 }
