@@ -1,9 +1,10 @@
 class binarin::profile::user_binarin {
   ::binarin::profile::profile_sync_daemon::user { "binarin": }
   include ::binarin::profile::docker
+  include ::binarin::profile::dropbox
 
   $packages = [ "zsh", "tmux", "screen", "mosh", "mc",
-                "build-essential", "rxvt-unicode-256color"]
+                "build-essential", "rxvt-unicode-256color", "kupfer" ]
   package { $packages: ensure => latest }
 
   Package["zsh"] -> User["binarin"]
