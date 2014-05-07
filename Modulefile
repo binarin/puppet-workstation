@@ -10,4 +10,7 @@ project_page 'UNKNOWN'
 ## Add dependencies, if any:
 dependency 'puppetlabs/apt', '>= 1.4.2'
 dependency 'puppetlabs/concat', '>= 1.0.2'
-
+dependency 'luxflux/openvpn', '>= v2.2.1'
+dependency 'puppetlabs/firewall', '>= v1.0.2'
+dependency 'lex/dnsmasq', '>= v2.4.0'
+dependency 'thias/sysctl', '>= v0.3.1'
