@@ -3,7 +3,22 @@ class binarin::profile::firewall::pre {
     require => undef,
   }
 
-  # Default firewall rules
+  ensure_packages(["iptables-persistent"])
+
+  firewallchain { 'INPUT:filter:IPv4':
+    purge => true
+  } ->
+  firewallchain { 'OUTPUT:filter:IPv4':
+    purge => true
+  } ->
+  firewallchain { 'FORWARD:filter:IPv4':
+    purge => true,
+    ignore => [
+      '-j fail2ban-ssh', # ignore the fail2ban jump rule
+      '--comment "[^"]*(?i:ignore)[^"]*"', # ignore any rules with "ignore" (case insensitive) in the comment in the rule
+      '(?i:docker)',
+    ],
+  }->
   firewall { '000 accept all icmp':
     proto   => 'icmp',
     action  => 'accept',

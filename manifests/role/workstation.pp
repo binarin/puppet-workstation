@@ -9,6 +9,7 @@ class binarin::role::workstation {
   include ::binarin::profile::chromium
   include ::binarin::profile::clementine
   include ::binarin::profile::openvpn
+  include ::binarin::profile::cups
 
   include ::binarin::profile::user_binarin
 }

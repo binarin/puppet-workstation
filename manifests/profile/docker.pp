@@ -1,10 +1,12 @@
 class binarin::profile::docker {
-  package { "docker.io": ensure => latest } ->
+  ensure_packages(["docker.io"])
+
+  Package["docker.io"] -> Group["docker"]
   group { "docker":
     ensure => present,
-  } ->
-  file { "/usr/bin/docker":
-    ensure => link,
-    target => "/usr/bin/docker.io",
+  }
+
+  firewallchain { 'DOCKER:nat:IPv4':
+    purge => false,
   }
 }

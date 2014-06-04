@@ -1,6 +1,6 @@
-resources { "firewall":
-  purge => true
-}
+# resources { "firewall":
+#   purge => true
+# }
 
 node "naberius.binarin.ru" {
   Firewall {
@@ -9,4 +9,8 @@ node "naberius.binarin.ru" {
   }
 
   include ::binarin::role::pve_public
+}
+
+node "ishamael.home.binarin.ru" {
+  include ::binarin::role::workstation
 }

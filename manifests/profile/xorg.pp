@@ -49,25 +49,13 @@ EndSection
     content => '
 Section "InputClass"
         Identifier "CirqueTouchpad"
-        MatchProduct "GlidePoint"
+        MatchProduct "GlidePoint|9925 AG Touchpad"
         Option "SwapAxes" "True"
         Option "Emulate3Buttons" "True"
         Option "InvertY" "True"
 EndSection
-'}
-
-  concat::fragment { "xorg.conf-glidepoint2":
-    order => "50",
-    target => "/etc/X11/xorg.conf",
-    content => '
-Section "InputClass"
-        Identifier "CirqueTouchpad1"
-        MatchProduct "9925 AG Touchpad"
-        Option "SwapAxes" "True"
-        Option "Emulate3Buttons" "True"
-        Option "InvertY" "True"
-EndSection
-'}
+    '
+  }
 
   concat::fragment { "xorg.conf-marblemouse":
     order => "50",
