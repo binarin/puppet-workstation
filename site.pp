@@ -11,6 +11,9 @@ node "naberius.binarin.ru" {
   include ::binarin::role::pve_public
 }
 
-node "ishamael.home.binarin.ru" {
+node "ishamael.home.binarin.ru", "ishamael" {
+  include ::binarin::role::workstation
+}
+node "demandred.yandex.net", "demandred" {
   include ::binarin::role::workstation
 }

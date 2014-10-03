@@ -6,9 +6,10 @@ class binarin::profile::user_binarin {
 
   $packages = [ "zsh", "tmux", "screen", "mosh", "mc",
                 "build-essential", "rxvt-unicode-256color", "kupfer",
-                "libkeybinder-dev", "wmctrl" ]
+                "libkeybinder-dev", "wmctrl", "git-svn", "subversion",
+                "pavucontrol", "xclip", "aosd-cat"]
 
-  package { $packages: ensure => latest }
+  ensure_packages($packages, {ensure => latest})
 
   Package["zsh"] -> User["binarin"]
   Group["docker"] -> User["binarin"]

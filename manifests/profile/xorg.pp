@@ -1,5 +1,5 @@
 class binarin::profile::xorg {
-  $packages = ["xorg", "xinput"]
+  $packages = ["xorg", "xinput", "fonts-mplus"]
   package { $packages:
     ensure => latest
   }

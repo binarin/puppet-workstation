@@ -10,7 +10,7 @@ class binarin::profile::profile_sync_daemon
   } ->
   apt::source { "profile-sync-daemon":
     location => 'http://ppa.launchpad.net/graysky/utils/ubuntu',
-    release => 'saucy',
+    release => 'trusty',
     repos => 'main',
   } ->
   package { "profile-sync-daemon": ensure => latest, } ->

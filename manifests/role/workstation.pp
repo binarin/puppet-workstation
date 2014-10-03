@@ -1,4 +1,4 @@
-class binarin::role::workstation {
+class binarin::role::workstation inherits binarin::role {
   include ::binarin::profile::vim
   include ::binarin::profile::xorg
   include ::binarin::profile::keepass
@@ -10,6 +10,8 @@ class binarin::role::workstation {
   include ::binarin::profile::clementine
   include ::binarin::profile::openvpn
   include ::binarin::profile::cups
+  include ::binarin::profile::sbcl
+  include ::binarin::profile::xmonad
 
   include ::binarin::profile::user_binarin
 }

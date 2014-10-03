@@ -1,4 +1,8 @@
 class binarin::profile::baseapps {
-  $packages = ["vim", "tmux", "mosh", "zsh", "screen", "nmap", "strace", "tshark", "mc", "less", "ack-grep"]
-  package { $packages: ensure => latest }
+  include ::binarin::profile::apt
+  include ::binarin::profile::vim
+  include ::binarin::profile::ack
+
+  $packages = ["tmux", "mosh", "zsh", "screen", "nmap", "strace", "tshark", "mc", "less", "curl"]
+  ensure_packages($packages, {ensure => latest})
 }

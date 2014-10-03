@@ -2,9 +2,6 @@ class binarin::profile::firewall::pre {
   Firewall {
     require => undef,
   }
-
-  ensure_packages(["iptables-persistent"])
-
   firewallchain { 'INPUT:filter:IPv4':
     purge => true
   } ->
