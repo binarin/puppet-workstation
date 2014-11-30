@@ -1,6 +1,6 @@
 class binarin::profile::insync {
   include ::binarin::profile::python_gpgme
-  $packages = ["insync", "insync-headless", "insync-nautilus"]
+  $packages = ["insync"]
   apt::key { "ACCAF35C":
     ensure => present,
   } ->
