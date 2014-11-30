@@ -3,6 +3,7 @@ class binarin::profile::user_binarin {
   include ::binarin::profile::docker
   include ::binarin::profile::dropbox
   include ::binarin::profile::insync
+  include ::binarin::profile::yandex_disk
   include ::binarin::profile::ack
 
   $packages = [ "zsh", "tmux", "screen", "mosh", "mc",
