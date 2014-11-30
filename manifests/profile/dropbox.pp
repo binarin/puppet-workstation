@@ -8,7 +8,7 @@ class binarin::profile::dropbox {
     location => 'http://linux.dropbox.com/debian',
     release => 'sid',
     repos => 'main',
-    include_src => true,
+    include_src => false,
   } ->
   package { "dropbox": ensure => latest }
 }
