@@ -9,7 +9,7 @@ class binarin::profile::user_binarin {
   $packages = [ "zsh", "tmux", "screen", "mosh", "mc",
                 "build-essential", "rxvt-unicode-256color", "kupfer",
                 "libkeybinder-dev", "wmctrl", "git-svn", "subversion",
-                "pavucontrol", "xclip", "aosd-cat", "audacious", "keepass2" ]
+                "pavucontrol", "xclip", "aosd-cat", "audacious", "keepass2", "sqlite3" ]
 
   ensure_packages($packages, {ensure => latest})
 
