@@ -19,7 +19,7 @@ FORGE
 GIT
   remote: git://github.com/binarin/puppet-workstation.git
   ref: master
-  sha: ead753aa5b9ab2e8753a48a63056704092a24a6f
+  sha: 903f4ecf9e58d6d534174a14905c90fe514527f6
   specs:
     binarin-binarin (0.1.1)
       binarin-dpkg_divert (>= 0.1.0)
