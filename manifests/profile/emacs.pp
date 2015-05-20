@@ -11,6 +11,4 @@ class binarin::profile::emacs {
   #     ]
   # )
   # ensure_packages(["fpm"], {provider => gem, require => Package["ruby-dev"]})
-
-  ensure_packages(["gnutls-bin"]) # for jabber.el
 }

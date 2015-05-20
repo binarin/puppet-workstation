@@ -12,6 +12,8 @@ class binarin::role::workstation inherits binarin::role {
   include ::binarin::profile::cups
   include ::binarin::profile::sbcl
   include ::binarin::profile::xmonad
+  include ::binarin::profile::hg
+  include ::binarin::profile::zeal
 
   include ::binarin::profile::user_binarin
 }
